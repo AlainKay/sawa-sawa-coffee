@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Coffee, MapPin, Calendar, Package, Mail, Leaf, Mountain, AlertCircle } from 'lucide-react';
+import { Coffee, MapPin, Calendar, Package, Mail, Leaf, Mountain, AlertCircle, Menu, X } from 'lucide-react';
 
 // Import images
 import lakevKivuView from '../media/Bingaroview_water.jpeg';
@@ -11,6 +11,7 @@ import coffeePlantKivu from '../media/coffee_plant_kivu.jpeg';
 import TraceabilitySection from './TraceabilitySection';
 
 const SawaSawaCoffee = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -41,6 +42,8 @@ const SawaSawaCoffee = () => {
               <Coffee className="h-8 w-8 text-amber-700" />
               <span className="text-2xl font-bold text-gray-900">Sawa Sawa Coffee</span>
             </div>
+
+            {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-gray-700 hover:text-amber-700 transition">About</a>
               <a href="#farm" className="text-gray-700 hover:text-amber-700 transition">Our Farm</a>
@@ -48,7 +51,62 @@ const SawaSawaCoffee = () => {
               <a href="#traceability" className="text-gray-700 hover:text-amber-700 transition">Traceability</a>
               <a href="#contact" className="text-gray-700 hover:text-amber-700 transition">Contact</a>
             </div>
+
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 rounded-md text-gray-700 hover:text-amber-700 hover:bg-gray-100 transition"
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
           </div>
+
+          {/* Mobile Navigation */}
+          {mobileMenuOpen && (
+            <div className="md:hidden py-4 border-t border-gray-200">
+              <div className="flex flex-col space-y-3">
+                <a
+                  href="#about"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-amber-700 px-3 py-2 rounded-md hover:bg-gray-50 transition"
+                >
+                  About
+                </a>
+                <a
+                  href="#farm"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-amber-700 px-3 py-2 rounded-md hover:bg-gray-50 transition"
+                >
+                  Our Farm
+                </a>
+                <a
+                  href="#sourcing"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-amber-700 px-3 py-2 rounded-md hover:bg-gray-50 transition"
+                >
+                  Sourcing
+                </a>
+                <a
+                  href="#traceability"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-amber-700 px-3 py-2 rounded-md hover:bg-gray-50 transition"
+                >
+                  Traceability
+                </a>
+                <a
+                  href="#contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-amber-700 px-3 py-2 rounded-md hover:bg-gray-50 transition"
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
@@ -65,7 +123,7 @@ const SawaSawaCoffee = () => {
               Premium Specialty Coffee from the Heart of Africa
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-100">
-              Single-origin Arabica grown in volcanic soil along the pristine shores of Lake Kivu, DRC
+              Single-origin Arabica grown in volcanic soil along the pristine shores of Lake Kivu in Minova, DRC
             </p>
             <a
               href="#contact"
@@ -267,7 +325,7 @@ const SawaSawaCoffee = () => {
             <div className="grid md:grid-cols-3 gap-6">
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Location</h4>
-                <p className="text-gray-700">Lake Kivu Region, Democratic Republic of Congo</p>
+                <p className="text-gray-700">Minova, Democratic Republic of Congo</p>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Processing</h4>
@@ -290,7 +348,7 @@ const SawaSawaCoffee = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-            <p className="text-xl text-gray-600">Ready to source premium coffee from Lake Kivu? Contact us for samples and availability.</p>
+            <p className="text-xl text-gray-600">Ready to source premium coffee from Sawa Sawa Farm? Contact us for samples and availability.</p>
           </div>
 
           <div className="bg-white rounded-lg shadow-xl p-8">
@@ -384,7 +442,7 @@ const SawaSawaCoffee = () => {
               <span className="text-2xl font-bold">Sawa Sawa Coffee</span>
             </div>
             <div className="text-gray-400 text-sm">
-              © 2025 Sawa Sawa Coffee. Premium specialty coffee from Lake Kivu, DRC.
+              © 2025 Sawa Sawa Coffee. Premium specialty coffee from Minova, DRC.
             </div>
           </div>
         </div>

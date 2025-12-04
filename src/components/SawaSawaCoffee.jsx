@@ -3,7 +3,7 @@ import { Coffee, MapPin, Calendar, Package, Mail, Leaf, Mountain, AlertCircle, M
 
 // Import images
 import lakevKivuView from '../media/Bingaroview_water.jpeg';
-import redCherries from '../media/Ready_red_plant_view.jpeg';
+import redCherries from '../media/Ready_red_plant_view2.jpeg';
 import sunDrying from '../media/best view.jpeg';
 import coffeePlantKivu from '../media/coffee_plant_kivu.jpeg';
 
@@ -186,19 +186,6 @@ const SawaSawaCoffee = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group">
               <img
-                src={sunDrying}
-                alt="Sun-drying coffee on raised beds"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end">
-                <div className="p-6 text-white">
-                  <h3 className="text-xl font-semibold mb-2">Sun-Drying Process</h3>
-                  <p className="text-sm text-gray-200">Traditional raised-bed drying</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group">
-              <img
                 src={lakevKivuView}
                 alt="Lake Kivu pristine location"
                 className="w-full h-full object-cover"
@@ -220,6 +207,19 @@ const SawaSawaCoffee = () => {
                 <div className="p-6 text-white">
                   <h3 className="text-xl font-semibold mb-2">Ripe Coffee Cherries</h3>
                   <p className="text-sm text-gray-200">Hand-picked at peak ripeness</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group">
+              <img
+                src={sunDrying}
+                alt="Sun-drying coffee on raised beds"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end">
+                <div className="p-6 text-white">
+                  <h3 className="text-xl font-semibold mb-2">Sun-Drying Process</h3>
+                  <p className="text-sm text-gray-200">Traditional raised-bed drying</p>
                 </div>
               </div>
             </div>

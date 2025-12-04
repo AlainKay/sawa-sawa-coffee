@@ -1,4 +1,4 @@
-import { Shield, MapPin, CheckCircle } from 'lucide-react';
+import { Link2, MapPin, CheckCircle, Database } from 'lucide-react';
 
 export default function TraceabilitySection() {
   return (
@@ -7,7 +7,7 @@ export default function TraceabilitySection() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
-            <Shield className="h-12 w-12 text-amber-600 mr-3" />
+            <Link2 className="h-12 w-12 text-amber-600 mr-3" />
             <h2 className="text-4xl font-bold text-gray-900">Blockchain Traceability</h2>
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -18,7 +18,7 @@ export default function TraceabilitySection() {
         {/* Key Benefits */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-            <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+            <Database className="h-12 w-12 text-blue-600 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-2">Immutable Records</h3>
             <p className="text-gray-600">
               Every transaction recorded on blockchain ensures data integrity and prevents tampering
